@@ -10,6 +10,6 @@ Vagrant.configure("2") do |config|
       vbox.cpus = "2"
       vbox.memory = "4096"
     end
-    gitlab.vm.provision "shell", path: "scripts/gitlab-provision.sh" ##execution d'un script bash qui installe Docker 
+    gitlab.vm.provision "shell", path: "scripts/gitlab-provision.sh" ##execution d'un script bash
   end
 end
