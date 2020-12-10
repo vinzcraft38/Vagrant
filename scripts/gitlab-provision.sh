@@ -11,12 +11,12 @@ usermod -aG docker vagrant ## Ajout user vagrant in docker group
 systemctl enable docker ## Ajout auto startup docker
 mkdir -p /srv/gitlab/{data,logs,config} ## Ajout dossier serveur gitlab
 ## GitLab-CE Container (docker)
-docker run --detach \ 
- --hostname gitlab \
- --publish 80:80 \
- --name gitlab \
- --restart always \
- --volume /srv/gitlab/config:/etc/gitlab \
- --volume /srv/gitlab/logs:/var/log/gitlab \
- --volume /srv/gitlab/data:/var/opt/gitlab \
- gitlab/gitlab-ce
+docker run --detach \
+--hostname gitlab \
+--publish 80:80 \
+--name gitlab \
+--restart always \
+--volume /srv/gitlab/config:/etc/gitlab \
+--volume /srv/gitlab/logs:/var/log/gitlab \
+--volume /srv/gitlab/data:/var/opt/gitlab \
+gitlab/gitlab-ce
