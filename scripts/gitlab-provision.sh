@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#Comment
 apt-get update
 apt-get -y upgrade
 apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common ## Ajout https apt + certificat + curl + agent cle gpg +
